@@ -8,7 +8,7 @@ var path = require("path");
 // var models = require("./app/models");
 var models = require("./models");
 var exphbs = require('express-handlebars');
-
+var mysql = require('mysql');
 var twilio = require('twilio');
 
 var connection;
