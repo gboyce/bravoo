@@ -1,0 +1,24 @@
+{
+    "development": {
+        "username": "test",
+        "password": "Welcome01",
+        "database": "bravoo",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
+    "test": {
+        "username": "root",
+        "password": "test",
+        "database": "database_test",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
+    "production": {
+        "username": "gkxymmkeecmqmei2",
+        "password": "jzbbkcnhfsvc34np",
+        "database": "bravoo",
+        "host": "bmsyhziszmhf61g1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "use_env_variable": "JAWSDB_URL",
+        "dialect": "mysql"
+    }
+}

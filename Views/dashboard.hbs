@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bravoo App</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/foundation.css">
+	<link rel="stylesheet" href="/assets/css/app.css">
+	<link rel="stylesheet" href="/assets/css/student_dashboard.css">
+	<link href="https://fonts.googleapis.com/css?family=Kanit:600" rel="stylesheet">
+</head>
+<body>
+<div class="app-dashboard shrink-medium">
+	<div class="row expanded app-dashboard-top-nav-bar">
+		<div class="columns medium-2">
+			<button data-toggle="app-dashboard-sidebar" class="menu-icon hide-for-medium"></button>
+			<span  class="app-dashboard-logo">Hello, Guardian!</span>
+		</div>
+		<div class="columns shrink app-dashboard-top-bar-actions">
+			<a href="/logout" class="button login-btm back-to-home"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a><a style="margin-left: 15px;color: #fff;text-align: right;width: 85%;position: relative;" href="/student" class=" back-to-home"><i class="fa fa-graduation-cap" aria-hidden="true"></i>  Student Dashboard</a>
+		</div>
+	</div>
+
+	<div class="app-dashboard-body off-canvas-wrapper">
+		<!-- <div id="app-dashboard-sidebar" class="app-dashboard-sidebar position-left off-canvas off-canvas-absolute reveal-for-medium" data-off-canvas>
+			<div class="app-dashboard-sidebar-title-area">
+				<div class="app-dashboard-close-sidebar">
+					<h3 class="app-dashboard-sidebar-block-title">Menu</h3>
+
+					<button id="close-sidebar" data-app-dashboard-toggle-shrink class="app-dashboard-sidebar-close-button show-for-medium" aria-label="Close menu" type="button">
+							<span aria-hidden="true"><a href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></span>
+						</button>
+				</div>
+				<div class="app-dashboard-open-sidebar">
+					<button id="open-sidebar" data-app-dashboard-toggle-shrink class="app-dashboard-open-sidebar-button show-for-medium" aria-label="open menu" type="button">
+							<span aria-hidden="true"><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
+						</button>
+				</div>
+			</div>
+			<div class="app-dashboard-sidebar-inner">
+
+
+				<ul class="menu vertical">
+					<li><a href="#" class="is-active">
+							<i class="fa fa-plus fa-2x" aria-hidden="true"></i><span class="app-dashboard-sidebar-text"><br>Assignment</span>
+						</a></li>
+					<li><a>
+							<i class="fa fa-pencil fa-2x" aria-hidden="true"></i><span class="app-dashboard-sidebar-text"><br>Update</span>
+						</a></li>
+					<li><a>
+							<i class="fa fa-trash fa-2x" aria-hidden="true"></i><span class="app-dashboard-sidebar-text"><br>Remove</span>
+						</a></li>
+					<li><a href="#" class="is-active">
+							<i class="fa fa-cogs fa-2x" aria-hidden="true"></i><span class="app-dashboard-sidebar-text"><br>Settings</span>
+						</a></li>
+				</ul>
+			</div>
+		</div> -->
+
+		<div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
+			<div class="row">
+        <!-- top assignment inputs -->
+				<div class="large-12 columns">
+					<h3 class="text-center dashboard-title">Guardian Dashboard</h3>
+					<div class="list-group-item new-item">
+						<form id="todo-form">
+							<div class="row">
+								<div class="large-7 columns">
+									<input class="new-item" placeholder="Add subject + Desc" type="text" />
+								</div>
+								<div class="large-5 columns">
+									<button type="submit" class="success button btn btn-default"><i class="fa fa-plus" aria-hidden="true"></i>
+ Add Assignment</button>
+									<button type="button" class="btm-reminder success hollow button"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+ Hey Bravoo!</button>
+									<button type="button" onclick="sendTextMessage()" class="btm-reminder success hollow button"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+ Send reminder</button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div class="row large-12 large-centered columns">
+					<!-- assignments go here -->
+					<ul class="list-group todo-list">
+						<span class="todo-container">
+								</span>
+					</ul>
+				</div>
+
+<div id="popupp" style="visibility:hidden;">Bravoo you're ready to add some assignments!</div>
+
+				<div class="status-container">
+				    <input type="radio" class="radio" name="progress" value="five" id="five">
+				    <label for="five" class="label">5%</label>
+
+				    <input type="radio" class="radio" name="progress" value="twentyfive" id="twentyfive" checked>
+				    <label for="twentyfive" class="label">25%</label>
+
+				    <input type="radio" class="radio" name="progress" value="fifty" id="fifty">
+				    <label for="fifty" class="label">50%</label>
+
+				    <input type="radio" class="radio" name="progress" value="seventyfive" id="seventyfive">
+				    <label for="seventyfive" class="label">75%</label>
+
+				    <input type="radio" class="radio" name="progress" value="onehundred" id="onehundred">
+				    <label for="onehundred" data-open="exampleModal1" class="label">Bravoo!</label>
+
+				    <div class="progress">
+				      <div class="progress-bar"></div>
+				    </div>
+				  </div>
+
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="reveal" id="exampleModal1" data-reveal>
+	<div class="container-flip">
+  <div class="sub-flip">
+    <span>B</span>
+    <span>R</span>
+    <span>A</span>
+    <span>V</span>
+		<span>O</span>
+		<span>O</span>
+  </div>
+</div>
+  <p class="lead">Hard work pays off! Hey how about some incentive time</p>
+	<div class="circle-loader">
+  <div class="checkmark draw"></div>
+</div>
+
+<p><button id="toggle" type="button" class="reward btn btn-success" value="five">Send a Bravoo Reward!</button></p>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+
+	<script src="/assets/js/vendor/jquery.js"></script>
+	<script src="/assets/js/vendor/what-input.js"></script>
+	<script src="/assets/js/vendor/foundation.js"></script>
+	<script src="/assets/js/app.js"></script>
+	<script src="/assets/js/view.js"></script>
+
+	<script>
+	$('[data-app-dashboard-toggle-shrink]').on('click', function(e) {
+		e.preventDefault();
+		$(this).parents('.app-dashboard').toggleClass('shrink-medium').toggleClass('shrink-large');
+	});
+
+
+	$('[data-toggle-menu]').on("click", function(){
+		$("#overlay-nav-menu").toggleClass("is-open");
+	});
+
+	$('#toggle').click(function() {
+  $('.circle-loader').toggleClass('load-complete');
+  $('.checkmark').toggle();
+	$('.progress-bar').css('width', '5%');
+});
+
+	(function() {
+	    var visited = localStorage.getItem('visited');
+	    if (!visited) {
+	        document.getElementById("popupp").style.visibility = "visible";
+	        localStorage.setItem('visited', true);
+	    }
+	})();
+
+	</script>
+
+</body>
+</html>
