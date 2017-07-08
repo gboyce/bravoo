@@ -100,7 +100,7 @@ if (process.env.JAWSDB_URL) {
     });
 };
 
-connetion.connect();
+connection.connect();
 
 app.listen(PORT, function(err) {
     if (!err)
