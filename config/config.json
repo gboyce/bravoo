@@ -1,7 +1,7 @@
 {
     "development": {
-        "username": "test",
-        "password": "Welcome01",
+        "username": "root",
+        "password": "",
         "database": "bravoo",
         "host": "127.0.0.1",
         "dialect": "mysql"
