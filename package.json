@@ -25,13 +25,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/suazod/bravoo.git"
+    "url": "git+https://github.com/gboyce/bravoo.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/suazod/bravoo/issues"
+    "url": "https://github.com/gboyce/bravoo/issues"
   },
-  "homepage": "https://github.com/suazod/bravoo#readme"
+  "homepage": "https://github.com/gboyce/bravoo#readme"
 }
